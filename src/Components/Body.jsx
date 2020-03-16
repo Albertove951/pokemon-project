@@ -4,8 +4,8 @@ export default class Body extends Component {
 
     render() {
         return (
-            <div className="jumbotron">
-            Hello World
+            <div>
+                Hello world
             </div>
         )
     }
