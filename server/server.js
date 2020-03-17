@@ -8,9 +8,9 @@ app.use(morgan('dev'));
 app.use(express.static('dist'));
 app.use(express.static('public'));
 
-app.get('/game/:pokemon', (req, res) => {
+app.get('/game/:pokemonSearch', (req, res) => {
     axios({
-        url: `https://pokeapi.co/api/v2/pokemon/ditto`,
+        url: `https://pokeapi.co/api/v2/pokemon/ditto/`,
         method: 'get',
     })
     .then(response => {

@@ -8,17 +8,19 @@ export default class Body extends Component {
             pokemon: [],
             pokemonSearch: ''        
         }
-        this.handleChange = this.handleChange.bind(this)
+        this.onClick = this.onCLick.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    componentDidMount() {
-        axios.get(`/game/:pokemon`)
+    onCLick() {
+        axios.get(`/game/:pokemonSearch`)
             .then(res => {
                 const pokemon = res.data;
                 this.setState({ pokemon: pokemon });
+                console.log(this.state.pokemon)
             })
         }
-
+        
         handleChange(event) {
             this.setState({ [event.target.name]: event.target.value })
         }    
@@ -27,7 +29,7 @@ export default class Body extends Component {
         return (
             <div>
                 <input type="text" placeholder="search..." name="pokemonSearch" onChange={this.handleChange} value={this.state.pokemonSearch}/>
-                <button>search</button>
+                <button onClick={this.onClick}>search</button>
             </div>
         )
     }
