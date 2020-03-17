@@ -18,10 +18,10 @@ export default class Body extends Component {
         }
         
         render() {
-            console.log(this.state.pokemon)
         return (
             <div>
-                Hello world
+                <input type="text" placeholder="search..."/>
+                <button>search</button>
             </div>
         )
     }
