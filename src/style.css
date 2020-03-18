@@ -5,19 +5,32 @@
 
 .body-container {
     text-align: center;
-    margin-top: 50px;
+    padding-top: 50px;
+    background-color: midnightblue;
 }
 
 .poke-container {
     margin-top: 30px;
     margin-left: 250px;
     margin-right: 250px;
+    background-color: black;
+    color: white;
+}
+
+.poke-container p {
+    margin-top: 20px;
+}
+
+.pokemon-name {
+    background-color: maroon;
+    margin-bottom: 0;
 }
 
 .poke-img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 200px;
-    width: 200px;
+    background-color: whitesmoke;
+    width: 250px;
+    height: 250px;
 }
