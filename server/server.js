@@ -8,15 +8,15 @@ app.use(morgan('dev'));
 app.use(express.static('dist'));
 app.use(express.static('public'));
 
-app.get('/game/:pokemonSearch', (req, res) => {
+app.get('/game/:name', (req, res) => {
+   let name = req.params.name
     axios({
-        url: `https://pokeapi.co/api/v2/pokemon/ditto/`,
+        url: `http://pokeapi.co/api/v2/pokemon/${name}`,
         method: 'get',
     })
     .then(response => {
         res.status(200).send(response.data);
     })
 });
-
 
 module.exports = app;
